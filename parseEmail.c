@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
 
 int validateChar(char c)
 {
+    /* Add (c == '_') in the end to consider '_' too while extracting */
 	if (((c >= 'a') && (c <= 'z')) || ((c >= 'A') && (c <= 'Z')) || 
         ((c >= '0') && (c <= '9')) || (c == '.'))
 		return 1;
