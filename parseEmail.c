@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	size_t len = 0;
 	ssize_t read;
 	int i, k, a, b, x, flag = 0;
-    int validateChar(char c);
+	int validateChar(char c);
     
 	fp = fopen(argv[1], "r");
 	if (fp == NULL) {
