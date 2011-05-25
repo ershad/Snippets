@@ -27,9 +27,7 @@ import time
 
 username = "Username"
 email = "email ID"
-email = '<' + email + '>'
 editor = "emacs -nw "
-
 
 # Every note must be in a format like
 
@@ -39,6 +37,7 @@ editor = "emacs -nw "
 # Line 4:
 # Line 5: <note start here.....>
 
+email = '<' + email + '>'
 
 os.system (editor + " draft.tmp")
 
