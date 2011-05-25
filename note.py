@@ -25,10 +25,10 @@ import time
 
 #Configurations
 
-username = "Ershad K"
-email = "ershad92@gmail.com"
+username = "Username"
+email = "email ID"
 email = '<' + email + '>'
-editor = "emacsclient "
+editor = "emacs -nw "
 
 
 # Every note must be in a format like
