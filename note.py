@@ -25,7 +25,7 @@ import time
 
 #Configurations
 
-username = "Username"
+realname = "Real Name"
 email = "email ID"
 editor = "emacs -nw "
 
@@ -71,7 +71,7 @@ if len(sec) == 1:
         
 timeStamp = year + month + day + hour + minute + sec
 
-header =  username + ' ' + email + '\n'
+header =  realname + ' ' + email + '\n'
 header += 'Date: ' + day + '-' + month + '-' + year
 header += '  ' + hour + ':' + minute + ':' + sec + '\n'
 header += '-' * 50
