@@ -1,0 +1,21 @@
+Design
+------
+
+The program has two parts:
+
+* server.py
+* client.py
+
+  The server program handles the requests from client program. Client program is a multithreaded program which has a thread dedicated to send creat-time-file-on-server requests over a period of 60 seconds
+
+
+Dependencies
+-------------
+
+None, it should work out of box in python 2.6.x
+
+
+Usage
+------
+
+Run server.py first. Then run client.py and try various commands
