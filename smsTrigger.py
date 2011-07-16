@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # 
-# getnew.py
+# smsTrigger.py
 # Author: Ershad K <ershad92@gmail.com>
 
 
