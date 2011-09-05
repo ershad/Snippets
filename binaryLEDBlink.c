@@ -2,7 +2,7 @@
  * Program to blink 3 LEDs according to the binary values from 1 through 7
  * First steps in AVR hacking ;)  - Ershad K, Shafeeq K  
  *
- * Connected 3 LEDs in PD1, PD0, PC5 and common ground. 
+ * Connect 3 LEDs in PD1, PD0, PC5 and common ground. 
  */
 
 #include <avr/io.h>
