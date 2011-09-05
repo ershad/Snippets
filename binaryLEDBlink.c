@@ -9,49 +9,49 @@
 #include <compat/ina90.h>    // needed for  _NOP()
 void waitd()
 {
-  register unsigned short int t = 0;
-  while(++t) _NOP();
+    register unsigned short int t = 0;
+    while(++t) _NOP();
 }
 
 void glow(unsigned short int* b)
 {
-  PORTC = 0;
-  PORTD = 0;
-  waitd();
-  waitd();
-  if (*b)
-    PORTC = 0x20;
-  if (*(b+1))
-    PORTD |= 0b00000001;
-  if(*(b+2))
-    PORTD |= 0b00000010;
+    PORTC = 0;
+    PORTD = 0;
+    waitd();
+    waitd();
+    if (*b)
+        PORTC = 0x20;
+    if (*(b+1))
+        PORTD |= 0b00000001;
+    if(*(b+2))
+        PORTD |= 0b00000010;
 
-  waitd();
-  waitd();
+    waitd();
+    waitd();
 }
 
 int main()
 {
-  DDRC |= 0x20;
-  DDRD |= 0xFF;
-  PORTC = 0;
-  PORTD = 0;
+    DDRC |= 0x20;
+    DDRD |= 0xFF;
+    PORTC = 0;
+    PORTD = 0;
   
-  unsigned short int i = 0;
-  unsigned short int k;
-  unsigned short int n;
-  unsigned short int b[3];
+    unsigned short int i = 0;
+    unsigned short int k;
+    unsigned short int n;
+    unsigned short int b[3];
   
-  for (; i <= 7; i++ )  {
-    n = i;
-    k = 0;
-    b[0] = b[1] = b[2] = 0;
-    for(; n!= 0; n /=2) {
-      b[k++] = n % 2;
+    for (; i <= 7; i++ )  {
+        n = i;
+        k = 0;
+        b[0] = b[1] = b[2] = 0;
+        for(; n!= 0; n /=2) {
+            b[k++] = n % 2;
+        }
+        glow(b);
+        if(i == 7)
+            i = 0;
     }
-    glow(b);
-    if(i == 7)
-      i = 0;
-  }
-  return 1;
+    return 1;
 }
