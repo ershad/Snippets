@@ -22,7 +22,7 @@ char *line = NULL;
 size_t len = 0;
 ssize_t read;
 int j, flag;
-unsigned int locations[26+9][2];
+unsigned int locations[26][2];
 
 int main(int argc, char *argv[])
 {
