@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
             if (line[0] < 'a')
                 continue;
             locations[line[0] - 'a'][0] = line[0];
-            locations[line[0] - 'a'][1] = ftell(fp);
+            locations[line[0] - 'a'][1] = ftell(fp) - strlen(line);
             k++;
         }
         old = first;
