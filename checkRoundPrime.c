@@ -23,12 +23,9 @@ int main(int argc, char *argv[])
 {
     unsigned long int i;
     
-    for (i = 0; i < 1000000; i++) {
-        if (checkRoundPrime(i)) {
-            count++;
+    for (i = 0; i < 1000000; i++) 
+        if (checkRoundPrime(i))
             printf("%ld\n", i);
-        }
-    }
 
     return 0;
 }
