@@ -3,6 +3,8 @@
  *
  * Copyright 2011 Ershad K ershad92@gmail.com
  * Licensed under GPL Version 3
+ * 
+ * Code is inefficient, will post a new one soon :) 
  */
 
 #include <stdio.h>
