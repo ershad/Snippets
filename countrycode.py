@@ -24,7 +24,11 @@ print countryName
 
 headers = { 'User-Agent' : 'Mozilla/5.0' }
 req = urllib2.Request('http://www.google.com/search?q=%s+time' % countryName, None, headers)
-timePageContent = urllib2.urlopen(req).readlines()
+try:
+    timePageContent = urllib2.urlopen(req).readlines()
+except:
+    print 'Time cannot be displayed'
+    exit(1)
 
 tline = ''
 for line in timePageContent:
