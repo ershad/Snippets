@@ -26,10 +26,6 @@ headers = { 'User-Agent' : 'Mozilla/5.0' }
 req = urllib2.Request('http://www.google.com/search?q=%s+time' % countryName, None, headers)
 timePageContent = urllib2.urlopen(req).readlines()
 
-#print timePageContent
-# timePage = urllib2.urlopen('http://www.google.com/search?q=%s+time' % countryName)
-# timePageContent = timePage.readlines()
-
 tline = ''
 for line in timePageContent:
     if line.find('<b>Time</b> in <b>') >= 0:
@@ -45,17 +41,3 @@ while startIndex <= endIndex:
 timeString = timeString.replace('<b>','')
 timeString = timeString.replace('</b>','')
 print 'Time: ' + timeString
-    
-        
-
-
-
-
-
-
-
-
-
-
-
-
