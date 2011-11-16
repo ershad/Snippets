@@ -4,7 +4,6 @@
 # Author: Ershad K <ershad92@gmail.com>
 # License: GPL Version 3
 
-from BeautifulSoup import BeautifulSoup
 import urllib2
 import time
 
