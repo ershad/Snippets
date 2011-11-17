@@ -34,7 +34,7 @@ while True:
     i = 0
     htmlbody = ''
     while i < len(lines)-1:
-        content = """<li><a href="%s">%s</a></li>\n""" % (lines[i+1], lines[i])
+        content = """<li><a href="%s" target="_blank">%s</a></li>\n""" % (lines[i+1], lines[i])
         htmlbody += content
         i += 2
 
